@@ -1,0 +1,22 @@
+---
+import Social from '../components/Social.astro';
+const socialMedia = [
+    { platform: "github", username: "cwdegidio" },
+    { platform: "linkedin", username: "in/cwdegidio"}
+];
+---
+<style>
+    footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+</style>
+
+<footer>
+    {
+        socialMedia.map(
+            (profile) => <Social platform={profile.platform} username={profile.username} />
+        )
+    }
+</footer>

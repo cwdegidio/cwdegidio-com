@@ -1,19 +1,64 @@
 ---
-const pageTitle = "Home Page";
----
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+const pageTitle = "Latest Posts";
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
-		<h1>{pageTitle}</h1>
-	</body>
-</html>
+const allPosts = await Astro.glob('./posts/*.md');
+const orderedPosts = allPosts.sort((postA, postB) => {
+	return new Date(postB.frontmatter.pubDate) - new Date(postA.frontmatter.pubDate);
+});
+
+const posts = orderedPosts.slice(0, 10);
+---
+<BaseLayout pageTitle={pageTitle}>
+	<main>
+		<section class="latest-posts">
+			{posts.map(post =>
+				<PostCard
+					title={post.frontmatter.title}
+					pubDate={new Date(post.frontmatter.pubDate).toLocaleDateString(
+						'en-us',
+						{
+							year: 'numeric',
+							month: 'short',
+							day: 'numeric'
+						}
+					)}
+					description={post.frontmatter.description}
+					url={post.url}
+				/>)}
+		</section>
+		<section class="tags">
+			<h2>Tags</h2>
+			<p>some tags will go here</p>
+		</section>
+		<section class="popular">
+			<h2>Popular</h2>
+			<p>some articles will go here</p>
+		</section>
+	</main>
+</BaseLayout>
+<style>
+	main {
+		display: grid;
+		align-items: start;
+		grid-template-rows: auto 1fr;
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas:
+			"latest tags"
+			"latest popular";
+		gap: 64px 96px;
+	}
+
+	.latest-posts {
+		grid-area: latest;
+	}
+
+	.tags {
+		grid-area: tags;
+	}
+
+	.popular {
+		grid-area: popular;
+	}
+</style>

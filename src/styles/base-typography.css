@@ -1,0 +1,73 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Slab:wght@300;400&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Oswald&display=swap');
+
+/*:root {*/
+/*    --serif-font: 'Roboto Slab', Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;*/
+/*    --san-serif-font: Oswald, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+/*}*/
+
+:root {
+    --headline-font: Oswald, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --body-font: 'Noto Sans', "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+}
+
+html {
+    font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headline-font);
+    font-weight: normal;
+    color: var(--primary-blue);
+    margin: 1rem 0;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.17rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.83rem;
+}
+
+h6 {
+    font-size: 0.67rem;
+}
+
+p, li {
+    font-family: var(--body-font);
+    line-height: 1.65;
+    font-weight: 300;
+}
+
+a {
+    color: var(--primary-pink);
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li:before {
+    content: "\2022";
+    color: var(--primary-pink);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
