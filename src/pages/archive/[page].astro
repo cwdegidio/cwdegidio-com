@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+const pageTitle = 'Archive';
+
+export async function getStaticPaths({ paginate }) {
+    const allPosts = await Astro.glob('../posts/*.md');
+    const orderedPosts = allPosts.sort((postA, postB) => {
+        return new Date(postB.frontmatter.pubDate) - new Date(postA.frontmatter.pubDate);
+    });
+
+    return paginate(orderedPosts, { pageSize: 10 });
+}
+
+const { page } = Astro.props;
+---
+<BaseLayout pageTitle={pageTitle}>
+    {page.lastPage > 1 ? <h2>Page {page.currentPage} of {page.lastPage}</h2> : null}
+    {page.data.map((post) => <PostCard
+            title={post.frontmatter.title}
+            pubDate={new Date(post.frontmatter.pubDate).toLocaleDateString(
+                'en-us',
+                {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                }
+            )}
+            description={post.frontmatter.description}
+            url={post.url}
+    />)}
+    <div class="pagination-controls">
+        {page.url.next ? <a href={page.url.next}><i class="fa-solid fa-chevron-left"> </i>Previous</a> : null}
+        {page.url.prev ? <a href={page.url.prev}>Next<i class="fa-solid fa-chevron-right"> </i></a> : null}
+    </div>
+</BaseLayout>

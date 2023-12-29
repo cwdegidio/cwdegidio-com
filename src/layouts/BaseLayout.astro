@@ -11,15 +11,43 @@ const { pageTitle } = Astro.props;
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
-        <script src="https://kit.fontawesome.com/60f423851f.js" crossorigin="anonymous"></script>
+        <script is:inline src="https://kit.fontawesome.com/60f423851f.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/night-owl.min.css">
+        <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+        <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
+        <script is:inline src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js/dist/highlightjs-line-numbers.min.js"></script>
     </head>
     <body>
         <Header />
         <h1>{pageTitle}</h1>
         <slot />
         <Footer />
+
         <script>
             import '../scripts/menu.js';
+            hljs.highlightAll(); // initialize highlighting
+            hljs.initLineNumbersOnLoad(); // apply line numbering
         </script>
     </body>
 </html>
+<style>
+    /* for block of numbers */
+    .hljs-ln-numbers {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        text-align: center;
+        color: #ccc;
+        border-right: 1px solid #CCC;
+        vertical-align: top;
+        padding-right: 5px;
+        /* your custom style here */
+    }
+    /* for block of code */
+    .hljs-ln-code {
+        padding-left: 10px;
+    }
+</style>

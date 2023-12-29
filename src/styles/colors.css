@@ -1,11 +1,90 @@
 :root {
-    --primary-pink: #fd3777;
-    --primary-fuchsia: #f706cf;
-    --primary-red: #fd1d53;
-    --primary-blue: #2de2e6;
-    --primary-black: #0d0221;
-    --secondary-black: #241734;
-    --tertiary-black: #2e2157;
-    --gradient-start: #2F0743;
-    --gradient-end: #41295a;
+    /* woodsmoke */
+    --cwd-woodsmoke-50: hsl(220, 20%, 97%);
+    --cwd-woodsmoke-100: hsl(220, 19%, 94%);
+    --cwd-woodsmoke-200: hsl(224, 21%, 86%);
+    --cwd-woodsmoke-300: hsl(223, 22%, 74%);
+    --cwd-woodsmoke-400: hsl(222, 21%, 60%);
+    --cwd-woodsmoke-500: hsl(222, 21%, 48%);
+    --cwd-woodsmoke-600: hsl(224, 22%, 39%);
+    --cwd-woodsmoke-700: hsl(225, 22%, 32%);
+    --cwd-woodsmoke-800: hsl(226, 21%, 27%);
+    --cwd-woodsmoke-900: hsl(226, 18%, 24%);
+    --cwd-woodsmoke-950: hsl(228, 19%, 5%);
+
+    /* shark */
+    --cwd-shark-50: hsl(216, 33%, 97%);
+    --cwd-shark-100: hsl(210, 31%, 94%);
+    --cwd-shark-200: hsl(209, 30%, 86%);
+    --cwd-shark-300: hsl(209, 29%, 74%);
+    --cwd-shark-400: hsl(208, 28%, 60%);
+    --cwd-shark-500: hsl(208, 27%, 48%);
+    --cwd-shark-600: hsl(209, 29%, 39%);
+    --cwd-shark-700: hsl(210, 29%, 32%);
+    --cwd-shark-800: hsl(210, 27%, 27%);
+    --cwd-shark-900: hsl(212, 25%, 24%);
+    --cwd-shark-950: hsl(213, 24%, 16%);
+
+    /* silver sand */
+    --cwd-silversand-50: hsl(0, 0%, 97%);
+    --cwd-silversand-100: hsl(240, 3%, 93%);
+    --cwd-silversand-200: hsl(240, 2%, 87%);
+    --cwd-silversand-300: hsl(210, 2%, 78%);
+    --cwd-silversand-400: hsl(210, 1%, 68%);
+    --cwd-silversand-500: hsl(220, 1%, 60%);
+    --cwd-silversand-600: hsl(225, 2%, 53%);
+    --cwd-silversand-700: hsl(220, 1%, 48%);
+    --cwd-silversand-800: hsl(220, 1%, 40%);
+    --cwd-silversand-900: hsl(210, 1%, 33%);
+    --cwd-silversand-950: hsl(240, 1%, 21%);
+
+    /* cyan */
+    --cwd-cyan-50: hsl(169, 100%, 97%);
+    --cwd-cyan-100: hsl(174, 100%, 89%);
+    --cwd-cyan-200: hsl(175, 100%, 78%);
+    --cwd-cyan-300: hsl(176, 96%, 69%);
+    --cwd-cyan-400: hsl(178, 83%, 50%);
+    --cwd-cyan-500: hsl(178, 100%, 40%);
+    --cwd-cyan-600: hsl(180, 100%, 32%);
+    --cwd-cyan-700: hsl(180, 97%, 26%);
+    --cwd-cyan-800: hsl(181, 87%, 22%);
+    --cwd-cyan-900: hsl(181, 75%, 19%);
+    --cwd-cyan-950: hsl(183, 100%, 10%);
+
+    /* breaker bay */
+    --cwd-breakerbay-50: hsl(180, 41%, 97%);
+    --cwd-breakerbay-100: hsl(172, 53%, 89%);
+    --cwd-breakerbay-200: hsl(174, 51%, 78%);
+    --cwd-breakerbay-300: hsl(175, 47%, 64%);
+    --cwd-breakerbay-400: hsl(177, 40%, 45%);
+    --cwd-breakerbay-500: hsl(178, 49%, 40%);
+    --cwd-breakerbay-600: hsl(179, 52%, 32%);
+    --cwd-breakerbay-700: hsl(180, 47%, 26%);
+    --cwd-breakerbay-800: hsl(181, 42%, 22%);
+    --cwd-breakerbay-900: hsl(182, 36%, 19%);
+    --cwd-breakerbay-950: hsl(182, 53%, 10%);
+
+    /* yellow orange */
+    --cwd-yelloworange-50: hsl(37, 100%, 96%);
+    --cwd-yelloworange-100: hsl(39, 100%, 92%);
+    --cwd-yelloworange-200: hsl(36, 98%, 83%);
+    --cwd-yelloworange-300: hsl(35, 97%, 72%);
+    --cwd-yelloworange-400: hsl(31, 96%, 65%);
+    --cwd-yelloworange-500: hsl(29, 94%, 53%);
+    --cwd-yelloworange-600: hsl(25, 89%, 48%);
+    --cwd-yelloworange-700: hsl(22, 88%, 40%);
+    --cwd-yelloworange-800: hsl(19, 79%, 34%);
+    --cwd-yelloworange-900: hsl(20, 75%, 28%);
+    --cwd-yelloworange-950: hsl(17, 81%, 15%);
+
+
+    /* global */
+    --cwd-background-dark: var(--cwd-woodsmoke-900);
+
+    /* typography */
+    --cwd-heading-body-color: var(--cwd-cyan-500);
+    --cwd-nav-link-color: var(--cwd-yelloworange-300);
+
+    /* ul li */
+    --cwd-bullet-color: var(--cwd-cyan-500);
 }

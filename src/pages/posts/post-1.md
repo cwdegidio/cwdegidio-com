@@ -22,3 +22,20 @@ Welcome to my _new blog_ about learning Astro! Here, I will share my learning jo
 ## What's next
 
 I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+
+> "The best programs are written so that computing machines can perform them quickly and so that human beings can understand them clearly. 
+> A programmer is ideally an essayist who works with traditional aesthetic and literary forms as well as mathematical concepts, to communicate the way that an algorithm works and to convince a reader that the results will be correct."
+> <br><br>\- **Donald Knuth**
+
+```javascript
+const myObject = {
+    name: "Curtis",
+    title: "Developer"
+}
+
+const myMethod = () => {
+    let x = 1;
+    let y = 2;
+    return x + y;
+}
+```

@@ -9,6 +9,16 @@ const orderedPosts = allPosts.sort((postA, postB) => {
 });
 
 const posts = orderedPosts.slice(0, 10);
+
+const techBook = {
+	url: "https://www.amazon.com/Modern-Concurrency-Swift-Second-Introducing/dp/1950325814",
+	title: "Modern Concurrency in Swift"
+}
+
+const personalBook = {
+	url: "https://www.amazon.com/Leviathan-Wakes-10th-Anniversary-Expanse/dp/0316333425",
+	title: "Leviathan Wakes"
+}
 ---
 <BaseLayout pageTitle={pageTitle}>
 	<main>
@@ -28,6 +38,13 @@ const posts = orderedPosts.slice(0, 10);
 					url={post.url}
 				/>)}
 		</section>
+		<section class="additional-links">
+			<h2>Additional Links</h2>
+			<p>See where my focus is <a href="/now">now</a>.</p>
+			<p>Check out what I <a href="/use">use</a>.</p>
+			<p>Current tech read: <a href={techBook.url}>{techBook.title}</a></p>
+			<p>Current personal read: <a href={personalBook.url}>{personalBook.title}</a></p>
+		</section>
 		<section class="tags">
 			<h2>Tags</h2>
 			<p>some tags will go here</p>
@@ -42,9 +59,10 @@ const posts = orderedPosts.slice(0, 10);
 	main {
 		display: grid;
 		align-items: start;
-		grid-template-rows: auto 1fr;
 		grid-template-columns: 2fr 1fr;
+		grid-template-rows: repeat(3, auto);
 		grid-template-areas:
+			"latest moreLinks"
 			"latest tags"
 			"latest popular";
 		gap: 64px 96px;
@@ -54,11 +72,16 @@ const posts = orderedPosts.slice(0, 10);
 		grid-area: latest;
 	}
 
+	.additional-links {
+		grid-area: moreLinks;
+	}
+
 	.tags {
 		grid-area: tags;
 	}
 
 	.popular {
+		display: none;
 		grid-area: popular;
 	}
 </style>

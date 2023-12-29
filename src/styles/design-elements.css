@@ -1,0 +1,63 @@
+/* tag pills */
+.tag-pills {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-pill {
+    font-size: 0.85rem;
+    margin: 0.25em;
+    border-radius: 9999px;
+    padding: .25em 1.25em;
+    background-color: var(--cwd-breakerbay-700);
+    transition: background-color 0.25s ease-in;
+}
+
+.tag-pill:hover {
+    background-color: var(--cwd-breakerbay-400);
+}
+
+.tag-pill > a {
+    color: white;
+    text-decoration: none;
+}
+
+/* code highlighting */
+.astro-code {
+    border-radius: 10px;
+}
+
+td.hljs-ln-numbers {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    color: #ccc;
+    border-right: 1px solid var(--cwd-heading-body-color);
+    vertical-align: top;
+    padding-right: 5px;
+    /* your custom style here */
+}
+/* for block of code */
+td.hljs-ln-code {
+    padding-left: 10px;
+}
+
+/* block quotes */
+blockquote {
+    border-left: 3px solid var(--cwd-heading-body-color);
+    padding-left: 10px;
+    font-style: italic;
+    width: 80%;
+    letter-spacing: .05rem;
+}
+
+/* article styles */
+.article-pub-date {
+    margin-top: -40px;
+    margin-bottom: 20px;
+    font-style: italic;
+}

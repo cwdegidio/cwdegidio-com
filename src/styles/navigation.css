@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     border-width: 0 0 1px 0;
-    border-color: var(--primary-blue);
+    border-color: var(--cwd-heading-body-color);
     border-style: solid;
     margin-top: 40px;
     margin-bottom: 60px;
@@ -11,7 +11,7 @@
 
 .nav-desktop > .site-name {
     font-family: var(--headline-font);
-    color: var(--primary-pink);
+    color: var(--cwd-heading-body-color);
     font-size: 2rem;
 }
 
@@ -23,10 +23,10 @@
 
 .nav-desktop > .nav-links > a {
     margin: 0 20px;
+    color: var(--cwd-nav-link-color);
     font-size: 1.2rem;
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--primary-fuchsia);
 }
 
 .nav-desktop > .nav-icons {
@@ -36,7 +36,7 @@
 
 .nav-desktop > .nav-icons > a {
     margin: 0 10px;
-    color: var(--primary-blue);
+    color: var(--cwd-heading-body-color);
     font-size: 1.5rem;
     align-items: flex-end;
 }
@@ -45,3 +45,15 @@
     margin-right: 0;
 }
 
+/* Archive Pagination */
+.pagination-controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination-controls > a > .fa-solid {
+    font-size: .85rem;
+    display: inline-block;
+    padding: 0 5px;
+}

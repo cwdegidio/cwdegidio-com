@@ -1,10 +1,4 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Slab:wght@300;400&display=swap');*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Oswald&display=swap');
-
-/*:root {*/
-/*    --serif-font: 'Roboto Slab', Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;*/
-/*    --san-serif-font: Oswald, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;*/
-/*}*/
 
 :root {
     --headline-font: Oswald, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -18,7 +12,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--headline-font);
     font-weight: normal;
-    color: var(--primary-blue);
+    color: var(--cwd-breakerbay-200);
     margin: 1rem 0;
 }
 
@@ -54,7 +48,7 @@ p, li {
 }
 
 a {
-    color: var(--primary-pink);
+    color: var(--cwd-nav-link-color);
     font-weight: 400;
     text-decoration: underline;
 }
@@ -65,7 +59,7 @@ ul {
 
 ul li:before {
     content: "\2022";
-    color: var(--primary-pink);
+    color: var(--cwd-bullet-color);
     font-weight: bold;
     display: inline-block;
     width: 1em;
