@@ -34,11 +34,9 @@ const social = socialMedia.default;
             <a href="/resume/">Resume</a>
         </div>
         <div class="nav-icons">
-            <a href="mailto:curtis@cwdegidio.com"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://hachyderm.io/@cwdegidio"><i class="fa-brands fa-mastodon"></i></a>
-            <a href="https://www.github.com/cwdegidio"><i class="fa-brands fa-square-github"></i></a>
-            <a href="https://www.linkedin.com/in/cwdegidio"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#"><i class="fa-solid fa-square-rss"></i></a>
+            {social.map( link => {
+                return <a href={link.url}><i class={link.iconClass}></i></a>
+            })}
         </div>
     </div>
 </div>
