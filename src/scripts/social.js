@@ -16,7 +16,7 @@ const socialMedia = [
         iconClass: "fa-brands fa-mastodon"
     },
     {
-        url: "#",
+        url: "/rss.xml",
         iconClass: "fa-solid fa-square-rss"
     }
 ]
