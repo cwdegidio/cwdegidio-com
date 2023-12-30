@@ -1,22 +1,29 @@
 ---
-import Social from '../components/Social.astro';
-const socialMedia = [
-    { platform: "github", username: "cwdegidio" },
-    { platform: "linkedin", username: "in/cwdegidio"}
-];
+import * as socialMedia from '../scripts/social.js';
+const social = socialMedia.default;
 ---
-<style>
-    footer {
-        display: flex;
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-</style>
-
 <footer>
-    {
-        socialMedia.map(
-            (profile) => <Social platform={profile.platform} username={profile.username} />
-        )
-    }
+    <div class="footer-links">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="/">Latest</a></li>
+            <li><a href="/archive/1">Archive</a></li>
+            <li><a href="/tags/">Tags</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/resume/">Resume</a></li>
+        </ul>
+    </div>
+    <div class="social-media">
+        <h3>Contact</h3>
+        <div class="social-media-container">
+            {social.map( link => {
+                return <a href={link.url}><i class={link.iconClass}></i></a>
+            })}
+        </div>
+    </div>
+    <div class="copyright">
+        <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+            <a property="dct:title" rel="cc:attributionURL" href="https://www.cwdegidio.com">cwdegidio.com</a> is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0</a>
+        </p>
+    </div>
 </footer>

@@ -7,10 +7,13 @@ const { pageTitle } = Astro.props;
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="generator" content={Astro.generator} />
-        <title>{pageTitle}</title>
+        <title>Curtis W. DeGidio | Software Developer | {pageTitle}</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
         <script is:inline src="https://kit.fontawesome.com/60f423851f.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/night-owl.min.css">
         <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -19,10 +22,9 @@ const { pageTitle } = Astro.props;
     </head>
     <body>
         <Header />
-        <h1>{pageTitle}</h1>
+        <!--<h1>{pageTitle}</h1>-->
         <slot />
         <Footer />
-
         <script>
             import '../scripts/menu.js';
             hljs.highlightAll(); // initialize highlighting

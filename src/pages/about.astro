@@ -2,66 +2,54 @@
 import '../styles/global.css';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const identity = {
-  firstName: "Curtis",
-  country: "United States",
-  occupation: "Software Developer",
-  hobbies: ["table-top role-playing games", "traveling", "scuba diving", "guitar", "motorcycles"]
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "Java", "Swift", "Python", "React", "Spring / Spring Boot", "SQL"];
-
-const happy = true;
-const finished = false;
-const goal = 3;
-
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
+const pageTitle="About me"
 ---
 
 <BaseLayout pageTitle="About this site">
-        <p>
-                This is the personal blog of myself, Curtis W. DeGidio. I've been a software developer for over ten years,
-                focusing primarily on web development. I've created this site as a place to write on the many topics that
-                I enjoy, such as programming, traveling, fleeting thoughts, table-top role-playing games, or whatever else
-                suits me.
-        </p>
-        <p>
-                This site has gone through many iterations. What I have been striving for the last few years is something
-                that is simple and easy to maintain. I've stumbled upon Astro, a static site generator that is easy to
-                work with and lets me focus on writing instead of working with a full-feature CMS. I currently work in
-                Adobe Experience Manager for my regular job and don't like bringing that complexity home with me 🤣.
-        </p>
-        <p>
-                Another goal of this website is to "learn in public." I've always enjoyed watching folks openly share
-                their learning journeys. When I was completing my BSCS, I wish I had done more to document how I was
-                growing as a developer. Currently I am working on my MSCS and want to do more in keeping a journal of
-                how I'm doing and what I am learning.
-        </p>
-        <h2>FAQ</h2>
-        <h3>As a developer, what are your interests?</h3>
-        <p>
-                As I mentioned I've been a developer for many years. Although I have worked in the web development
-                for a long time as a front-end developer (HTML, CSS, JS, Node.js, Express, React, Angular, etc), I've spent the last few
-                years working as a full-stack developer (adding Java, Spring/Spring Boot to my skill set). I also enjoy
-                working with SQL and databases. I like experimenting with containers and writing my own APIs, my most recent
-                being an API to support an iOS application I am working to bring to the App Store.
-        </p>
-        <h3>You like to travel. Where have you been?</h3>
-        <p>
-                I've been everywhere man...😆. Recently I went to Italy to visit the town where my family is from, San Polo Matese.
-                This included stops in Rome, Pompeii, and Amalfi. I go to the Caribbean frequently as I love scuba diving whenever
-                I get the chance. I've been to Puerto Rico, Cayman Brac, Mexico, Canada, Belize, Nepal, Thailand, Japan, and Hong Kong. Future
-                trips I am planning are another trip to Italy, a river boat trip on the Amazon River, and Morocco. Here in the States,
-                I like getting up to the Pacific Northwest whenever I can. I think the hiking in the Mount Rianier area is some of the
-                best the US offers.
-        </p>
-        <h3>What role-playing games do you enjoy?</h3>
-        <p>
-                I'm a big fan of the old-school renaissance movement in the gaming community. My favorite game to play is
-                BECMI Dungeons & Dragons. I really enjoy the cleaned up B/X D&D rules of Old-School Essentials. Other systems
-                I have played and would love to get back to are Cyberpunk 2020 or Red, old-school Shadowrun, and Call of Cthulhu.
-                I also enjoy war games, my favorite being the Command & Colors Ancients series.
-        </p>
+        <h1>{pageTitle}</h1>
+        <article>
+                <p>
+                        This is the personal blog of myself, Curtis W. DeGidio. I've been a software developer for over ten years,
+                        focusing primarily on web development. I've created this site as a place to write on the many topics that
+                        I enjoy, such as programming, traveling, fleeting thoughts, table-top role-playing games, or whatever else
+                        suits me.
+                </p>
+                <p>
+                        This site has gone through many iterations. What I have been striving for the last few years is something
+                        that is simple and easy to maintain. I've stumbled upon Astro, a static site generator that is easy to
+                        work with and lets me focus on writing instead of working with a full-feature CMS. I currently work in
+                        Adobe Experience Manager for my regular job and don't like bringing that complexity home with me 🤣.
+                </p>
+                <p>
+                        Another goal of this website is to "learn in public." I've always enjoyed watching folks openly share
+                        their learning journeys. When I was completing my BSCS, I wish I had done more to document how I was
+                        growing as a developer. Currently I am working on my MSCS and want to do more in keeping a journal of
+                        how I'm doing and what I am learning.
+                </p>
+                <h2>FAQ</h2>
+                <h3>As a developer, what are your interests?</h3>
+                <p>
+                        As I mentioned I've been a developer for many years. Although I have worked in the web development
+                        for a long time as a front-end developer (HTML, CSS, JS, Node.js, Express, React, Angular, etc), I've spent the last few
+                        years working as a full-stack developer (adding Java, Spring/Spring Boot to my skill set). I also enjoy
+                        working with SQL and databases. I like experimenting with containers and writing my own APIs, my most recent
+                        being an API to support an iOS application I am working to bring to the App Store.
+                </p>
+                <h3>You like to travel. Where have you been?</h3>
+                <p>
+                        I've been everywhere man...😆. Recently I went to Italy to visit the town where my family is from, San Polo Matese.
+                        This included stops in Rome, Pompeii, and Amalfi. I go to the Caribbean frequently as I love scuba diving whenever
+                        I get the chance. I've been to Puerto Rico, Cayman Brac, Mexico, Canada, Belize, Nepal, Thailand, Japan, and Hong Kong. Future
+                        trips I am planning are another trip to Italy, a river boat trip on the Amazon River, and Morocco. Here in the States,
+                        I like getting up to the Pacific Northwest whenever I can. I think the hiking in the Mount Rianier area is some of the
+                        best the US offers.
+                </p>
+                <h3>What role-playing games do you enjoy?</h3>
+                <p>
+                        I'm a big fan of the old-school renaissance movement in the gaming community. My favorite game to play is
+                        BECMI Dungeons & Dragons. I really enjoy the cleaned up B/X D&D rules of Old-School Essentials. Other systems
+                        I have played and would love to get back to are Cyberpunk 2020 or Red, old-school Shadowrun, and Call of Cthulhu.
+                        I also enjoy war games, my favorite being the Command & Colors Ancients series.
+                </p>
+        </article>
 </BaseLayout>

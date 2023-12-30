@@ -3,16 +3,19 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const { frontmatter } = Astro.props;
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-    <p class="article-pub-date">{new Date(frontmatter.pubDate.slice(0, 10)).toLocaleDateString(
-        'en-us',
-        {
-            year: 'numeric',
-            month: 'short',
-            day: 'numeric'
-        }
-    )}</p>
-    <div class="tag-pills">
-        {frontmatter.tags.map(tag => <p class="tag-pill"><a href={`/tags/${tag}`}>{tag}</a></p>)}
-    </div>
-    <slot />
+    <article>
+        <h1>{frontmatter.title}</h1>
+        <p class="article-pub-date">{new Date(frontmatter.pubDate.slice(0, 10)).toLocaleDateString(
+            'en-us',
+            {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            }
+        )}</p>
+        <div class="tag-pills">
+            {frontmatter.tags.map(tag => <p class="tag-pill"><a href={`/tags/${tag}`}>{tag}</a></p>)}
+        </div>
+        <slot />
+    </article>
 </BaseLayout>

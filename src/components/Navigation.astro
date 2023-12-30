@@ -1,4 +1,6 @@
 ---
+import * as socialMedia from '../scripts/social.js';
+const social = socialMedia.default;
 ---
 <div class="nav-desktop">
     <div class="site-name">
@@ -12,10 +14,31 @@
         <a href="/resume/">Resume</a>
     </div>
     <div class="nav-icons">
-        <a href="mailto:curtis@cwdegidio.com"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://hachyderm.io/@cwdegidio"><i class="fa-brands fa-mastodon"></i></a>
-        <a href="https://www.github.com/cwdegidio"><i class="fa-brands fa-square-github"></i></a>
-        <a href="https://www.linkedin.com/in/cwdegidio"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="#"><i class="fa-solid fa-square-rss"></i></a>
+        {social.map( link => {
+            return <a href={link.url}><i class={link.iconClass}></i></a>
+        })}
+    </div>
+    <div class="nav-mobile">
+        <i class="fa-solid fa-bars hamburger"></i>
+    </div>
+    <div class="nav-mobile-modal">
+        <div class="close-button-container">
+            <i class="fa-regular fa-circle-xmark close-button"></i>
+        </div>
+        <div class="nav-links">
+            <h2>Menu</h2>
+            <a href="/">Latest</a>
+            <a href="/archive/1">Archive</a>
+            <a href="/tags/">Tags</a>
+            <a href="/about/">About</a>
+            <a href="/resume/">Resume</a>
+        </div>
+        <div class="nav-icons">
+            <a href="mailto:curtis@cwdegidio.com"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://hachyderm.io/@cwdegidio"><i class="fa-brands fa-mastodon"></i></a>
+            <a href="https://www.github.com/cwdegidio"><i class="fa-brands fa-square-github"></i></a>
+            <a href="https://www.linkedin.com/in/cwdegidio"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-solid fa-square-rss"></i></a>
+        </div>
     </div>
 </div>

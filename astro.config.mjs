@@ -2,5 +2,5 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    site: "https://cwdegidio-com.netlify.app",
+    site: "https://www.cwdegidio.com",
 });

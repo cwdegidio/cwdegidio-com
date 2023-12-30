@@ -4,6 +4,7 @@ import PostCard from '../components/PostCard.astro';
 const pageTitle = "Latest Posts";
 
 const allPosts = await Astro.glob('./posts/*.md');
+const tags = [...new Set(allPosts.map(post => post.frontmatter.tags).flat())];
 const orderedPosts = allPosts.sort((postA, postB) => {
 	return new Date(postB.frontmatter.pubDate) - new Date(postA.frontmatter.pubDate);
 });
@@ -21,6 +22,7 @@ const personalBook = {
 }
 ---
 <BaseLayout pageTitle={pageTitle}>
+	<h1>{pageTitle}</h1>
 	<main>
 		<section class="latest-posts">
 			{posts.map(post =>
@@ -47,7 +49,9 @@ const personalBook = {
 		</section>
 		<section class="tags">
 			<h2>Tags</h2>
-			<p>some tags will go here</p>
+			<div class="tag-pills">
+				{tags.map(tag => <p class="tag-pill"><a href={`/tags/${tag}`}>{tag}</a></p>)}
+			</div>
 		</section>
 		<section class="popular">
 			<h2>Popular</h2>
@@ -56,32 +60,54 @@ const personalBook = {
 	</main>
 </BaseLayout>
 <style>
-	main {
-		display: grid;
-		align-items: start;
-		grid-template-columns: 2fr 1fr;
-		grid-template-rows: repeat(3, auto);
-		grid-template-areas:
+	@media screen and (min-width: 851px) {
+		main {
+			display: grid;
+			align-items: start;
+			grid-template-columns: 2fr 1fr;
+			grid-template-rows: repeat(3, auto);
+			grid-template-areas:
 			"latest moreLinks"
 			"latest tags"
 			"latest popular";
-		gap: 64px 96px;
+			gap: 64px 96px;
+		}
+
+		.additional-links,
+		.tags,
+		.popular {
+			display: block;
+		}
+
+		.additional-links {
+			grid-area: moreLinks;
+		}
+
+		.tags {
+			grid-area: tags;
+		}
+
+		.popular {
+			display: none;
+			grid-area: popular;
+		}
+	}
+
+	@media screen and (max-width: 850px) {
+		main {
+			display: block;
+		}
+
+		.additional-links,
+		.tags,
+		.popular {
+			display: none;
+		}
 	}
 
 	.latest-posts {
 		grid-area: latest;
 	}
 
-	.additional-links {
-		grid-area: moreLinks;
-	}
 
-	.tags {
-		grid-area: tags;
-	}
-
-	.popular {
-		display: none;
-		grid-area: popular;
-	}
 </style>
