@@ -34,7 +34,7 @@ We will be using the following settings:
 - **Location:** The location in the file system where you would like to store your project.
 - **Language:** Java
 - **Build System:** Maven
-- **JDK:** Your selected JDK. In my case I am using ```temurin-17``.
+- **JDK:** Your selected JDK. In my case I am using ```temurin-17```.
 - **Add Sample Code:** false
 - **Advanced Settings:**
   - **GroupId:** Your chosen group ID. This is usually in reverse domain format. In my case: ```com.cwdegidio```.
@@ -329,7 +329,7 @@ the same steps as earlier, we create a new project with the following settings:
 - **Location:** The location in the file system where you would like to store your project.
 - **Language:** Java
 - **Build System:** Maven
-- **JDK:** Your selected JDK. In my case I am using ```temurin-17``.
+- **JDK:** Your selected JDK. In my case I am using ```temurin-17```.
 - **Add Sample Code:** false
 - **Advanced Settings:**
     - **GroupId:** Your chosen group ID. This is usually in reverse domain format. In my case: ```com.cwdegidio```.
