@@ -4,7 +4,7 @@ title: 'Creating a Non-Executable JAR Using Maven'
 pubDate: 2023-01-28
 description: 'Non-Executable JAR files are a great tool for sharing libraries with others.'
 author: 'Curtis W. DeGidio'
-tags: ['programming', 'java', 'maven']
+tags: ['programming', 'java', 'maven', 'tutorial']
 ---
 In this article, we will examine what a JAR file is, what they are used for, and how to create one using Maven.
 
@@ -348,7 +348,7 @@ Next, we add the dependency for our new JAR to the ```pom.xml``` file of this pr
 
 If we look at the Maven tab in IntelliJ, we will see an item labeled **Dependencies**. If we open this, we will see
 the following:
-```
+```plaintext
 - com.cwdegidio:shapes.calc:1.0-SNAPSHOT
  |- com.fasterxml.jackson.core:jackson-core:2.14.2
  |- com.fasterxml.jackson.core:jackson-annotations:2.14.2
@@ -379,7 +379,7 @@ public class Main {
 
 And when we run our ```main``` method, our terminal prints the following:
 
-```
+```json
 {
   "width" : 3.5,
   "height" : 8.2,
