@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Creating a Non-Executable JAR Using Maven'
-pubDate: 2023-01-28
+pubDate: 2024-01-28
 description: 'Non-Executable JAR files are a great tool for sharing libraries with others.'
 author: 'Curtis W. DeGidio'
 tags: ['programming', 'java', 'maven', 'tutorial']
