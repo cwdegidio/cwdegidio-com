@@ -16,7 +16,7 @@ declarations and compiles them into a class](https://docs.oracle.com/en/java/jav
 By using tools like Maven, we can automate the process and avoid having to run multiple commands from the CLI.
 
 JARs can be either executable or non-executable. Non-executable JAR files are used for configurations, libraries, etc.
-Executable JARs are archive that are executable within the JVM.
+Executable JARs are archives that are executable within the JVM.
 
 ## Using Maven to Create a Non-Executable JAR
 Before we look at creating an executable JAR in an upcoming tutorial, we will look at creating a non-executable JAR. This is useful when you
