@@ -42,7 +42,7 @@ We will be using the following settings:
 
 Press **Create** to open your new project.
 
-## Step 2. Updating dependencies
+### Step 2. Updating dependencies
 Open ```pom.xml```. Here we will tell maven what our dependency is. For this project, we will add dependencies for 
 Jackson, which we will use to print out JSON of each of our shapes.
 
